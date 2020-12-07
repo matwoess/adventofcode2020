@@ -50,7 +50,5 @@ if __name__ == '__main__':
     all_bags = [Bag(spec) for spec in split_data]
     answer1 = part1(all_bags)
     print('Answer1:', answer1)
-    # aocd.submit(answer1, part='a', day=day)
     answer2 = part2(all_bags)
     print('Answer2:', answer2)
-    # aocd.submit(answer1, part='a', day=day)

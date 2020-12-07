@@ -56,7 +56,5 @@ if __name__ == '__main__':
     all_passports = [Passport(d) for d in split_data]
     answer1 = part1(all_passports)
     print('Answer1:', answer1)
-    # aocd.submit(answer1, part='a', day=day)
     answer2 = part2(all_passports)
     print('Answer2:', answer2)
-    # aocd.submit(answer1, part='a', day=day)

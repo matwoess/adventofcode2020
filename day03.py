@@ -38,7 +38,5 @@ if __name__ == '__main__':
     tree_array = char_array == '#'
     answer1 = part1(tree_array)
     print('Answer1:', answer1)
-    # aocd.submit(answer1, part='a', day=day)
     answer2 = part2(tree_array)
     print('Answer2:', answer2)
-    # aocd.submit(answer2, part='b', day=day)

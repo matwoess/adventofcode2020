@@ -30,7 +30,5 @@ if __name__ == '__main__':
     split_data = data.splitlines()
     answer1 = part1(split_data)
     print('Answer1:', answer1)
-    # aocd.submit(answer1, part='a', day=day)
     answer2 = part2(split_data)
     print('Answer2:', answer2)
-    # aocd.submit(answer2, part='b', day=day)

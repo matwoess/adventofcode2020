@@ -39,7 +39,5 @@ if __name__ == '__main__':
     assigned_seats = [Seat.from_string(partition_string) for partition_string in split_data]
     answer1 = part1(assigned_seats)
     print('Answer1:', answer1)
-    # aocd.submit(answer1, part='a', day=day)
     answer2 = part2(assigned_seats)
     print('Answer2:', answer2)
-    # aocd.submit(answer1, part='a', day=day)
