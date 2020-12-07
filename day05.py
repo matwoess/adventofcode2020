@@ -13,31 +13,9 @@ class Seat(NamedTuple):
     @classmethod
     def from_string(cls, partition_string: str) -> 'Seat':
         row_splits = partition_string[0:7]
-        range_from = 0
-        range_to = 128
-        for s in row_splits:
-            range_len = range_to - range_from
-            if s == 'F':
-                range_to -= range_len // 2
-            elif s == 'B':
-                range_from += range_len // 2
-            else:
-                raise ValueError('invalid partition character for rows')
-        assert range_from == range_to - 1
-        row = range_from
+        row = int(row_splits.translate({ord('B'): '1', ord('F'): '0'}), base=2)
         column_splits = partition_string[7:10]
-        range_from = 0
-        range_to = 8
-        for s in column_splits:
-            range_len = range_to - range_from
-            if s == 'L':
-                range_to -= range_len // 2
-            elif s == 'R':
-                range_from += range_len // 2
-            else:
-                raise ValueError('invalid partition character for columns')
-        assert range_from == range_to - 1
-        col = range_from
+        col = int(column_splits.translate({ord('R'): '1', ord('L'): '0'}), base=2)
         return Seat(row, col)
 
 
