@@ -55,10 +55,8 @@ def get_next_state_line_of_sight(occupied: np.ndarray, seats: np.ndarray, floor:
             y = c + i * rw
             if not (0 <= x < shape[0] and 0 <= y < shape[1]):
                 return 0
-            if occupied[x, y] == 1:
-                return 1
             if seats[x, y]:
-                return 0
+                return occupied[x, y]
         return 0
 
     for row in range(shape[0]):
